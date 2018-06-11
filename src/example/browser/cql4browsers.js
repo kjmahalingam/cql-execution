@@ -5856,7 +5856,8 @@
       return unitValidityCache[unit];
     } else {
       try {
-        ucum.parse(ucum_unit(unit));
+        // TODO: TEMP FIX SOLELY TO GET WORKING ON INTERNET EXPLORER
+        // ucum.parse(ucum_unit(unit));
         unitValidityCache[unit] = true;
         return true;
       } catch (error) {
